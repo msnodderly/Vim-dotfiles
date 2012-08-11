@@ -16,8 +16,7 @@ call pathogen#helptags()
 
 
 "autocmd BufRead,BufEnter,BufNewFile *.arc so /home/mds/projects/arc/arc2/vimarc.vim
-autocmd BufRead,BufEnter,BufNewFile *.arc set lisp ft=lisp
-autocmd BufRead,BufEnter,BufNewFile *.txt set wrap syntax=on textwidth=72 formatoptions=l  filetype=textile
+autocmd BufRead,BufEnter,BufNewFile *.txt set wrap syntax=on textwidth=72 formatoptions=l  filetype=markdown
 
 filetype plugin indent on
 
