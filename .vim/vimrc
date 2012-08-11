@@ -1,3 +1,7 @@
+filetype on  " Automatically detect file types.
+set nocompatible  
+ 
+"
 if &t_Co >= 256 || has("gui_running")
        colorscheme wombat
 endif
@@ -18,61 +22,53 @@ autocmd BufRead,BufEnter,BufNewFile *.txt set wrap syntax=on textwidth=72 format
 filetype plugin indent on
 
 
+let mapleader = ","
+let g:mapleader = ","
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set cindent
 set autoindent
 set smarttab
-"set expandtab
+
  
-
-set guioptions=-m
-
-set guifont=Menlo\ Regular:h14"
-
-set incsearch
-set ignorecase
-set smartcase
-set scrolloff=4
-
-
-"map j gj
-"map k gk
-"map $ g$
-"map ^ g^
-"color slate
-
-"color xoria256 
-
-filetype on  " Automatically detect file types.
-set nocompatible  
- 
-" Add recently accessed projects menu (project plugin)
-set viminfo^=!
- 
-" Minibuffer Explorer Settings
-"let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplMapWindowNavArrows = 1
-"let g:miniBufExplMapCTabSwitchBufs = 1
-"let g:miniBufExplModSelTarget = 1
- 
-" alt+n or alt+p to navigate between entries in QuickFix
-"map <silent> <m-p> :cp <cr>
-"map <silent> <m-n> :cn <cr>
- 
- 
-
-set formatoptions=tcqr1
-
-
-" Visual
-set showmatch  " Show matching brackets.
-set mat=5  " Bracket blinking.
 
 " gvim specific
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
+
+
+set guioptions-=m
+set guioptions-=T
+
+set guifont=Menlo\ Regular:h14"
+
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" get rid of highlighted searches with ,/
+nmap <silent> <leader>/ :nohlsearch<CR>   
+
+
+
+map j gj
+map k gk
+map $ g$
+map ^ g^
+
+" Add recently accessed projects menu (project plugin)
+" set viminfo^=!
+ 
+set formatoptions=tcq1
+
+
+" Visual
+set showmatch  " Show matching brackets.
+set mat=2      " .2 seconds
 
 " Backups & Files
 set backup                     " Enable creation of backup file.
@@ -83,13 +79,31 @@ set directory=~/tmp     " Where temporary files will go.
 
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
+
 set title                " change the terminal's title
+
 set noerrorbells         " don't beep
+set novisualbell
 
 
 
 
-nmap <silent> ,/ :nohlsearch<CR>
+
+set wildmode=list:longest
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+set wildignore=*.swp,*.bak,*.pyc,*.class
 
 
+set scrolloff=8         
+set sidescrolloff=15
+set sidescroll=1
