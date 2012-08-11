@@ -1,5 +1,7 @@
 
 call pathogen#infect()
+call pathogen#helptags()
+
 
 
 "autocmd BufRead,BufEnter,BufNewFile *.arc so /home/mds/projects/arc/arc2/vimarc.vim
@@ -72,3 +74,11 @@ set mouse=a  " Mouse in all modes
 set backup                     " Enable creation of backup file.
 set backupdir=~/tmp " Where backups will go.
 set directory=~/tmp     " Where temporary files will go.
+
+
+
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
+set noerrorbells         " don't beep
