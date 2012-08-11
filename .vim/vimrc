@@ -1,6 +1,17 @@
+
+call pathogen#infect()
+
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+
 "autocmd BufRead,BufEnter,BufNewFile *.arc so /home/mds/projects/arc/arc2/vimarc.vim
 autocmd BufRead,BufEnter,BufNewFile *.arc set lisp ft=lisp
 autocmd BufRead,BufEnter,BufNewFile *.txt set wrap syntax=on textwidth=72 formatoptions=l  filetype=textile
+
+filetype plugin indent on
+
 
 set expandtab
 set tabstop=4
@@ -30,7 +41,7 @@ syntax on
 "map ^ g^
 "color slate
 
-color xoria256 
+"color xoria256 
 
 filetype on  " Automatically detect file types.
 set nocompatible  
@@ -50,7 +61,7 @@ set viminfo^=!
  
  
 
-set formatoptions=tcqra1
+set formatoptions=tcqr1
 
 
 " Visual
