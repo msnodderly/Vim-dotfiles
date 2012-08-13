@@ -11,10 +11,6 @@ set background=dark
 colorscheme solarized
 
 
-
-
-"autocmd BufRead,BufEnter,BufNewFile *.arc so /home/mds/projects/arc/arc2/vimarc.vim
-
 filetype plugin indent on
 
 
