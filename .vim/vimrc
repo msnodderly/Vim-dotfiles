@@ -99,3 +99,6 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set scrolloff=4         
 set sidescrolloff=15
 set sidescroll=1
+
+set wildmode=longest:full
+set wildmenu
