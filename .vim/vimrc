@@ -26,9 +26,9 @@ set smarttab
 
  
 
-" gvim specific
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
+set ttymouse=xterm2
 
 
 set guioptions-=m
