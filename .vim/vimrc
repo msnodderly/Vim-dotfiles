@@ -2,6 +2,13 @@ call pathogen#infect()
 call pathogen#helptags()
 
 
+
+" experimenting with this - yank/paste text to/from the system clipboard
+set clipboard=unnamed
+
+
+
+
 filetype on  " Automatically detect file types.
 set nocompatible  
 syntax on
