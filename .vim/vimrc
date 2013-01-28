@@ -2,10 +2,9 @@ call pathogen#infect()
 call pathogen#helptags()
 
 
-set nu
+" line numbers on
+set number
 
-" experimenting with this - yank/paste text to/from the system clipboard
-set clipboard=unnamed
 
 
 
@@ -64,11 +63,8 @@ map k gk
 map $ g$
 map ^ g^
 
-" Add recently accessed projects menu (project plugin)
-" set viminfo^=!
  
 set formatoptions=tcq1
-
 
 
 " Visual
@@ -76,8 +72,8 @@ set showmatch  " Show matching brackets.
 set mat=2      " .2 seconds
 
 " Backups & Files
-set backup                     " Enable creation of backup file.
-set backupdir=~/tmp " Where backups will go.
+set backup              " Enable creation of backup file.
+set backupdir=~/tmp     " Where backups will go.
 set directory=~/tmp     " Where temporary files will go.
 
 
@@ -115,3 +111,25 @@ set sidescroll=1
 
 set wildmode=longest:full
 set wildmenu
+
+
+
+""
+"" Experimental settings
+""
+
+
+" return to last position when re-opening file
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+"insert a hashrocket ( => ) with ctrl-l
+imap <c-l> <space>=><space>
+
+" clear search buffer when hitting return
+nnoremap <CR> :nohlsearch<cr>
+
+
+" experimenting with this - yank/paste text to/from the system clipboard
+" set clipboard=unnamed
+"
+
