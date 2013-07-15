@@ -3,7 +3,7 @@ call pathogen#helptags()
 
 
 " line numbers on
-set number
+"set number
 
 
 
@@ -29,8 +29,8 @@ let mapleader = ","
 let g:mapleader = ","
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set cindent
 set autoindent
 set smarttab
@@ -118,6 +118,14 @@ set wildmenu
 "" Experimental settings
 ""
 
+"set foldmethod=syntax
+"
+"au VimEnter * exe "normal zR" | au BufReadPost * exe "normal zR" 
+"
+set nofoldenable
+
+
+
 
 " return to last position when re-opening file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -127,6 +135,7 @@ imap <c-l> <space>=><space>
 
 " clear search buffer when hitting return
 nnoremap <CR> :nohlsearch<cr>
+
 
 
 " experimenting with this - yank/paste text to/from the system clipboard
