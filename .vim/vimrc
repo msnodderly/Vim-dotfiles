@@ -18,7 +18,8 @@ set t_Co=256
 "set background=dark
 "colorscheme twilight
 "colorscheme solarized
-colorscheme railscasts
+"colorscheme railscasts
+colorscheme dracula
 
 
 
