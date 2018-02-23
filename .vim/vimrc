@@ -5,7 +5,7 @@ call pathogen#helptags()
 " line numbers on
 "set number
 
-
+set paste
 
 
 
@@ -38,7 +38,7 @@ set smarttab
  
 
 set mousehide  " Hide mouse after chars typed
-set mouse=a  " Mouse in all modes
+"set mouse=a  " Mouse in all modes
 set ttymouse=xterm2
 
 
@@ -140,5 +140,3 @@ nnoremap <CR> :nohlsearch<cr>
 
 " experimenting with this - yank/paste text to/from the system clipboard
 " set clipboard=unnamed
-"
-
