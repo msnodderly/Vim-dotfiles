@@ -18,8 +18,9 @@ set t_Co=256
 "set background=dark
 "colorscheme twilight
 "colorscheme solarized
-"colorscheme railscasts
-colorscheme dracula
+"#colorscheme railscasts
+"colorscheme dracula
+colorscheme spacemacs-theme
 
 
 
